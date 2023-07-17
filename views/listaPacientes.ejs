@@ -1,0 +1,23 @@
+<%- include('header') -%>
+<h2>Listado de Pacientes</h2>
+ <table>
+
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+    <th>Telefono</th>
+    <th>Cedula</th>
+  </tr>
+  <% patients.forEach(patient => { %>
+  <tr>
+    <td><%=patient.firstName %></td>
+    <td><%=patient.lastName %></td>
+    <td><%=patient.age %></td>
+    <td><%=patient.phone %></td>
+    <td><%=patient.cedula %></td>
+  </tr>
+    <% }) %>
+</table> 
+<%- include('footer') -%>
+

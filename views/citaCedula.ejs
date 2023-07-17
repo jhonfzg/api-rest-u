@@ -1,0 +1,25 @@
+<%- include('header') -%>
+<h2>Listado de Citas por Cedula de Paciente</h2>
+ <table>
+
+  <tr>
+    <th>ID Cita</th>
+    <th>Nombre Doctor</th>
+    <th>Especialidad</th>
+    <th>Nombre del Paciente</th>
+    <th>Cedula Paciente</th>
+    <th>Fecha</th>
+  </tr>
+  <% appointments.forEach(appointment => { %>
+  <tr>
+    <td><%=appointment._id %></td>
+    <td><%=appointment.doctorName %></td>
+    <td><%=appointment.speciality %></td>
+    <td><%=appointment.patientName %></td>
+    <td><%=appointment.cedula %></td>
+    <td><%=appointment.date %></td>
+  </tr>
+    <% }) %>
+</table> 
+<%- include('footer') -%>
+

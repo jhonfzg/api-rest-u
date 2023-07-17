@@ -1,0 +1,23 @@
+<%- include('header') -%>
+<h1>Información de Cita única por ID</h1>
+ <table>
+
+  <tr>
+    <th>ID de la Cita</th>
+    <th>Nombre del Doctor</th>
+    <th>Nombre del Paciente</th>
+    <th>Cedula del Paciente</th>
+    <th>Especialidad del Doctor</th>
+    <th>Fecha</th>
+  </tr>
+  <tr>
+    <td><%=appointment._id %></td>
+    <td><%=appointment.doctorName %></td>
+    <td><%=appointment.patientName %></td>
+    <td><%=appointment.cedula %></td>
+    <td><%=appointment.speciality %></td>
+    <td><%=appointment.date %></td>
+  </tr>
+</table> 
+<%- include('footer') -%>
+

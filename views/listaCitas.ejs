@@ -1,0 +1,23 @@
+<%- include('header') -%>
+<h2>Listado de Citas</h2>
+ <table>
+
+  <tr>
+    <th>ID de la cita</th>
+    <th>Nombre del Doctor</th>
+    <th>Especialidad</th>
+    <th>Nombre del Paciente</th>
+    <th>Fecha</th>
+  </tr>
+  <% appointments.forEach(appointment => { %>
+  <tr>
+    <td><%=appointment._id %></td>
+    <td><%=appointment.doctorName %></td>
+    <td><%=appointment.speciality %></td>
+    <td><%=appointment.patientName %></td>
+    <td><%=appointment.date %></td>
+  </tr>
+    <% }) %>
+</table> 
+<%- include('footer') -%>
+

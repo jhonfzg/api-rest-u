@@ -1,0 +1,59 @@
+<%- include('header') %>
+    <!-- form doctores -->
+    <h2>Bienvenido </h2>
+    <h2>Este espacio es para agregar los doctores: </h2>
+    <form method="post" action="/api/principal/doctors">
+        
+            <label for="firstName"> nombre: <input id="firstName" name="firstName" type="text" minlength="3" maxlength="20"
+                required /></label>
+            <label for="lastName"> apellido: <input id="lastName" name="lastName" type="text" minlength="5"
+                maxlength="20" required /></label>
+            <label for="speciality"> especialidad:
+                <select  id="speciality" name="speciality" required>
+                    <option value="">seleccionar</option>
+                    <option value="medicina-general">medicina general</option>
+                    <option value="cardiologia">cardiologia</option>
+                    <option value="medicina-interna">medicina interna</option>
+                    <option value="dermatologia">dermatologia</option>
+                    <option value="rehabilitacion-fisica">rehabilitacion fisica</option>
+                    <option value="psicologia">psicologia</option>
+                    <option value="odontologia">odontologia</option>
+                    <option value="radiologia">radiologia</option>
+                </select>
+            </label>
+            <label for="office"> consultorio:
+                <select id="office" name="office" required>
+                    <option value="">seleccionar</option>
+                    <option value="400">400</option>
+                    <option value="401">401</option>
+                    <option value="402">402</option>
+                    <option value="403">403</option>
+                    <option value="404">404</option>
+                    <option value="405">405</option>
+                    <option value="406">406</option>
+                    <option value="407">407</option>
+                </select>
+            </label>
+            <label for="email"> email:
+                <input type="email" name="email" required>
+            </label>
+<br><br>
+            <label for="cedula"> cedula:
+                <input type="number" name="cedula" required>
+            </label>
+            <button type="submit" name="submit" style="background-color: green";>Agregar Doctor</button>
+       
+    </form>
+<br><br>
+    <form method="get" action="/api/v1/doctors">
+        <button style="background-color: green";>Mostrar Doctors</button>
+    </form>
+<br>
+    <form id="searchForm" method="get" action="/api/v1/doctors">
+    <label for="doctorCedula"> Ingrese cedula del doctor <input type="number" id="doctorCedula" required></label>
+    <button type="submit" style="background-color: green";>Buscar Doctor</button>
+    </form>
+
+<script src="/js/getByCedula.js"></script>
+
+<%- include('footer') -%>

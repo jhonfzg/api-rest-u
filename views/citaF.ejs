@@ -1,0 +1,53 @@
+<%- include('header') %>
+<!-- Form appointments -->
+
+<form action="/api/v1/appointments" method="post">
+    <h2>Bienvenido</h2>
+<h2>En este espacio podras crear las citas a cada paciente</h2>
+
+    
+        <label for="cedula"> Cedula del Paciente:
+            <input type="number" name="cedula" required>
+        </label>
+        <label for="speciality"> Especialidad del Doctor:
+            <select  id="speciality" name="speciality" required>
+                <option value="">seleccionar</option>
+                <option value="medicina-general">medicina general</option>
+                <option value="cardiologia">cardiologia</option>
+                <option value="medicina-interna">medicina interna</option>
+                <option value="dermatologia">dermatologia</option>
+                <option value="rehabilitacion-fisica">rehabilitacion fisica</option>
+                <option value="psicologia">psicologia</option>
+                <option value="odontologia">odontologia</option>
+                <option value="radiologia">radiologia</option>
+            </select>
+        </label>
+        <label for="date"> Fecha:
+            <input type="date" name="date"  min="2023-07-17" max="2023-12-31" required>
+        </label>
+    
+<br>
+    <button type="submit" name="submit" style="background-color: green"; >crear cita</button>
+</form>
+    <br>
+<br>
+<form id="searchForm" method="get" action="/api/v1/appointments">
+    <label for="appointmentId">Cita por su identificador<input type="text" id="appointmentId" required></label>
+    <button type="submit" style="background-color: green";>Identificador</button>
+</form>
+<br>
+<br>
+<form id="searchAllForm" method="get" action="/api/v1/appointments/cedula">
+    <label for="appointmentsCedula">Cita por cedula  <input type="number" id="appointmentsCedula" required></label>
+    <button type="submit" style="background-color: green";>Cedula</button>
+</form>
+<br>
+<form  method="get" action="/api/v1/appointments">
+    <button type="submit" style="background-color: green";>Buscar todas las citas</button>
+</form>
+
+
+
+<script src="/js/getAppointmentById.js"></script>
+<script src="/js/getAppointmentsById.js"></script>
+<%- include('footer') -%>

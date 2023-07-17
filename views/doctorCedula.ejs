@@ -1,0 +1,25 @@
+<%- include('header') -%>
+<h2>Información de doctor por cedula</h2>
+ <table>
+
+  <tr>
+    <th>ID del Doctor</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Especialidad</th>
+    <th>Consultorio</th>
+    <th>Email</th>
+    <th>Cedula</th>
+  </tr>
+  <tr>
+    <td><%=doctor._id %></td>
+    <td><%=doctor.firstName %></td>
+    <td><%=doctor.lastName %></td>
+    <td><%=doctor.speciality %></td>
+    <td><%=doctor.office %></td>
+    <td><%=doctor.email %></td>
+    <td><%=doctor.cedula %></td>
+  </tr>
+</table> 
+<%- include('footer') -%>
+

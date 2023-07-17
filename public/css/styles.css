@@ -1,0 +1,25 @@
+label {
+    display: block;
+}
+
+body {
+    margin: 50px;
+}
+div {
+    margin: 5px auto 0;
+    width: 50%;
+    border-radius: 15px;
+    padding: 30px 40px 0;
+    max-width: 600px;
+    min-width: 300px;
+    backdrop-filter: blur(20px);
+}
+button {
+    display: block;
+}
+h1, #description {
+    text-align: center;
+}
+fieldset {
+    padding-bottom: 30px;
+}

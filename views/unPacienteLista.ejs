@@ -1,0 +1,23 @@
+<%- include('header') -%>
+<h1>Información del Paciente por Cedula</h1>
+ <table>
+
+  <tr>
+    <th>ID del Paciente</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Cedula</th>
+    <th>Teléfono</th>
+    <th>Edad</th>
+  </tr>
+  <tr>
+    <td><%=patient._id %></td>
+    <td><%=patient.firstName %></td>
+    <td><%=patient.lastName %></td>
+    <td><%=patient.cedula %></td>
+    <td><%=patient.phone %></td>
+    <td><%=patient.age %></td>
+  </tr>
+</table> 
+<%- include('footer') -%>
+
